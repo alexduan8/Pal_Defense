@@ -55,7 +55,7 @@ function draw() {
 	var displayText3 = "You helped Pikachu escape"
 	var displayText4 = "... FOR NOW ..."
 	var displayText5 = "YOU FAILED ME"
-	var displayText6 = "Click around to change locations";
+	var displayText6 = "Click around to change locations"
 	if (upHeld == true) {
 		state = 1;
 	}
