@@ -52,9 +52,10 @@ function setup() {
 function draw() {
   var displayText = "Press UP to start.";
 	var displayText2 = "Help Pikachu by collecting parts of his missing soul.";
-	var displayText3 = "You helped Pikachu escape"
-	var displayText4 = "... FOR NOW ..."
-	var displayText5 = "YOU FAILED ME"
+	var displayText3 = "You helped Pikachu escape";
+	var displayText4 = "... FOR NOW ...";
+	var displayText5 = "YOU FAILED ME";
+	var displayText6 = "Click around to change locations";
 	if (upHeld == true) {
 		state = 1;
 	}
@@ -74,6 +75,7 @@ function draw() {
 		textSize(20);
     textAlign(CENTER);
 		text(displayText2, 400, 200);
+		text(displayText6, 400, 400);
 		pop();
   }
 	if(state == 1) {
