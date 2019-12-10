@@ -18,7 +18,7 @@ let scream;
 let jumpscare;
 let dingdong;
 let childrenFX;
-let begin;
+let begin; 
 let duration = 247;
 let time = 247;
 var LightR=300;
@@ -38,7 +38,7 @@ function preload(){
 	endBackground = loadImage('end.jpg');
 	pikachu = loadImage('pikachu.png');
   song = loadSound('BackgroundMusic.mp3');
-	scream = loadSound('Scream.mp3');
+	scream = loadSound('scream.mp3');
 	jumpscare = loadSound('jumpscare.mp3');
 	dingdong = loadSound('bell.mp3');
 	childrenFX = loadSound('children.mp3');
@@ -47,15 +47,14 @@ function setup() {
 	createCanvas(Width, Height);
   textFont("Courier New");
   state = 0;
-	begin = millis();
+	begin = millis();   
 }
 function draw() {
   var displayText = "Press UP to start.";
 	var displayText2 = "Help Pikachu by collecting parts of his missing soul.";
-	var displayText3 = "You helped Pikachu escape";
-	var displayText4 = "... FOR NOW ...";
-	var displayText5 = "YOU FAILED ME";
-	var displayText6 = "Click around to change locations";
+	var displayText3 = "You helped Pikachu escape"
+	var displayText4 = "... FOR NOW ..."
+	var displayText5 = "YOU FAILED ME"
 	if (upHeld == true) {
 		state = 1;
 	}
@@ -75,13 +74,12 @@ function draw() {
 		textSize(20);
     textAlign(CENTER);
 		text(displayText2, 400, 200);
-		text(displayText6, 400, 400);
 		pop();
   }
 	if(state == 1) {
-		song.play();
+		song.play(); 
     time = duration - (millis() - begin)/1000;
-
+		
 		if(stage == 1) {
 			background(leftBackground);
 		}
@@ -91,7 +89,7 @@ function draw() {
 		if(stage == 3) {
 			background(rightBackground);
 		}
-
+		
 		if (time < 230 && time > 225) {
 			pikachuLocation = 1;
 			pikachuX = 0;
@@ -102,9 +100,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 	if (time < 214 && time > 210) {
 			pikachuLocation = 3;
 			pikachuX = 500;
@@ -115,9 +113,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 		if (time < 205 && time > 198) {
 			childrenFX.play();
 			pikachuLocation = 1;
@@ -129,9 +127,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 		if (time < 192 && time > 190) {
 			scream.play();
 			pikachuLocation = 1;
@@ -143,9 +141,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 		if (time < 184 && time > 179) {
 			pikachuLocation = 3;
 			pikachuX = 450;
@@ -156,12 +154,12 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 			if (score < 15) {
 				state = 2;
 			}
 		}
-
+		
 		if (time < 170 && time > 164) {
 			pikachuLocation = 2;
 			pikachuX = 337;
@@ -172,9 +170,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 		if (time < 162 && time > 159) {
 			childrenFX.play();
 			pikachuLocation = 3;
@@ -186,9 +184,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 		if (time < 155 && time > 150) {
 			pikachuLocation = 2;
 			pikachuX = 187;
@@ -199,13 +197,13 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 			if (score < 30){
 				state = 2;
 			}
 		}
-
-
+		
+		
 		if (time < 143 && time > 135) {
 			scream.play();
 			pikachuLocation = 2;
@@ -217,9 +215,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+		
 		if (time < 130 && time > 127) {
 			pikachuLocation = 1;
 			pikachuX = 237;
@@ -230,9 +228,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+			
 		if (time < 121 && time > 115) {
 			dingdong.play();
 			pikachuLocation = 3;
@@ -244,9 +242,9 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 		}
-
+				
 		if (time < 110 && time > 100) {
 			pikachuLocation = 1;
 			pikachuX = 438;
@@ -257,12 +255,12 @@ function draw() {
 					score = score + 1;
 					print("Score: " + score);
 				}
-			}
+			}	
 			if (score < 45){
 				state = 2;
 			}
 		}
-
+		
 		if (time < 97 && time > 91) {
 			pikachuLocation = 2;
 			pikachuX = 761;
@@ -275,7 +273,7 @@ function draw() {
 				}
 			}
 		}
-
+		
 		if (time < 85) {
 			if (score < 50){
 				state = 2;
@@ -296,11 +294,11 @@ function draw() {
 		stroke(0, 0, 0);
 		strokeWeight(1000);
 		ellipse(x, y, 1000+LightR, 1000+LightR);
-
+ 
 		stroke(0, 0, 0,50);
 		strokeWeight(10);
 		ellipse(x, y, LightR, LightR);
-
+ 
 		stroke(0, 0, 0,100);
 		strokeWeight(15);
 		ellipse(x, y, LightR-10, LightR-10);
@@ -365,3 +363,4 @@ function keyReleased() {
 	if (key === "ArrowRight"){ rightHeld = false; }
 	if (key == "80"){ pHeld = fase; }
 }
+
