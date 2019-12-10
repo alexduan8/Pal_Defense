@@ -38,7 +38,7 @@ function preload(){
 	endBackground = loadImage('end.jpg');
 	pikachu = loadImage('pikachu.png');
   song = loadSound('BackgroundMusic.mp3');
-	scream = loadSound('scream.mp3');
+	scream = loadSound('Scream.mp3');
 	jumpscare = loadSound('jumpscare.mp3');
 	dingdong = loadSound('bell.mp3');
 	childrenFX = loadSound('children.mp3');
