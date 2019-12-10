@@ -304,7 +304,6 @@ function draw() {
 		stroke(0, 0, 0,100);
 		strokeWeight(15);
 		ellipse(x, y, LightR-10, LightR-10);
-		clear();
   }
 	if (state == 2) {
 		jumpscare.play();
